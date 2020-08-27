@@ -1,10 +1,10 @@
 import React from 'react';
 import Fab from '@material-ui/core/Fab';
-import SaveIcon from '@material-ui/icons/Save';
+import AddIcon from '@material-ui/icons/Add';
 const SaveBtn = () => {
     return(
       <Fab color="primary" aria-label="add" className="save-btn">
-        <SaveIcon />
+        <AddIcon />
       </Fab>
     );
 }
