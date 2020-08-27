@@ -6,16 +6,13 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MailIcon from '@material-ui/icons/Mail';
-import Estilos from '../Estilo/Estilo';
 const Drawer = () =>{
-    const classes = Estilos.useStyles();
-
     return(
         <div>
           <h1>Fatec Overflow</h1>
       <Divider />
       <List>
-        {['Home', 'Minhas Perguntas', 'Minhas Respostas', 'Drafts'].map((text, index) => (
+        {['Home', 'Minhas Perguntas', 'Minhas Respostas', 'Topicos'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
@@ -24,7 +21,7 @@ const Drawer = () =>{
       </List>
       <Divider />
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+        {['Sobre nós', 'Suporte', 'Seja um contribuidor'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
