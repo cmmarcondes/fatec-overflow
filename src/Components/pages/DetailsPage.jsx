@@ -1,9 +1,9 @@
 import React, {useCallback, useState, useEffect} from 'react';
-import PostService from '../../../Services/service';
+import PostService from '../../Services/service';
 import { useParams } from 'react-router-dom';
-import { StyledPost, PostTitle, PostContent, PostUser } from '../../../Styles/styles';
+import { StyledPost, PostTitle, PostContent, PostUser } from '../../Styles/styles';
 
-const CardDetails = () => {
+const DetailsPage = () => {
     const [post, setPost] = useState([]);
     const { id } = useParams();
     const GetPosts = useCallback(async()=>{
@@ -31,4 +31,4 @@ const CardDetails = () => {
         </>
     );
 }
-export default CardDetails;
+export default DetailsPage;

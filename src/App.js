@@ -1,12 +1,10 @@
 import React from "react";
-import SaveBtn from "./Components/buttons/SaveBtn";
-import HomePage from "./Components/conteudos/main/HomePage";
+import MainHome from "./Components/main/MainHome";
 
 const App = () => {
   return (
     <>
-      <HomePage />
-      <SaveBtn />
+      <MainHome />
     </>
   );
 };

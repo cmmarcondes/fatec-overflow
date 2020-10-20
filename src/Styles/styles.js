@@ -28,12 +28,21 @@ export const Button = styled.button`
 `;
 
 export const Header = styled.div`
-  padding: 20px;
+display: flex;
+justify-content: space-between;
+  padding: 25px;
   background-color: #7c77b9;
   font-size: 30px;
   color: white;
   font-family: sans-serif;
   box-shadow: 0px 1px 8px 2px grey;
+`;
+
+export const HeaderText = styled.h3`
+font-size: 24px;
+font-weight: lighter;
+color: white;
+letter-spacing: 5px;
 `;
 
 export const StyledMenu = styled.div`
@@ -110,12 +119,14 @@ export const MenuText = styled(Link)`
 `;
 
 export const StyledPost = styled.div`
-  width: auto;
+  width: 70%;
   height: auto;
-  margin: 20px;
-  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding: 50px;
   background-color: white;
-  box-shadow: 0px 2px 8px 1px gray;
+  box-shadow: 0px 1px 6px 1px gray;
   border-radius: 8px;
 `;
 

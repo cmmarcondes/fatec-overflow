@@ -2,20 +2,22 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import PostPage from './Components/conteudos/main/PostPage';
+import MainPosts from './Components/main/MainPosts';
+import MainDetails from './Components/main/MainDetails';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Profile from "./Components/conteudos/main/Profile";
-import QuestionsPage from "./Components/conteudos/main/QuestionsPage";
-import AnswersPage from "./Components/conteudos/main/AnswersPage";
+import MainProfiles from "./Components/main/MainProfile";
+import MainQuestions from "./Components/main/MainQuestions";
+import MainAnswers from "./Components/main/MainAnswers";
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/posts/:id" component={PostPage} />
-      <Route path="/perfil" component={Profile} />
-      <Route path="/perfil/respostas" component={QuestionsPage} />
-      <Route path="/perfil/perguntas" component={AnswersPage} />
+      <Route path="/posts/:id" component={MainDetails} />
+      <Route path="/perfil" component={MainProfiles} />
+      <Route path="/perguntas" component={MainQuestions} />
+      <Route path="/respostas" component={MainAnswers} />
+      <Route path="/posts" component={MainPosts} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

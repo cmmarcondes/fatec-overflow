@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { PostContent, PostTitle, PostUser, StyledCard } from '../../../Styles/styles';
-import PostService from '../../../Services/service';
+import { PostTitle, PostUser, StyledCard } from '../../Styles/styles';
+import PostService from '../../Services/service';
 
-const Card = () => {
+const Posts = () => {
   const [post, setPost] = useState([]);
   const GetPosts = useCallback(async()=>{
     const post_data = await PostService.getPosts();
@@ -25,4 +25,4 @@ const Card = () => {
       </>
   );
 }
-export default Card;
+export default Posts;

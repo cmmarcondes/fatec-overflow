@@ -8,10 +8,13 @@ const MenuMiddleItens = () => {
           <MenuText MiddleSection to={{pathname: `/`}}>
             Início
           </MenuText>
-          <MenuText MiddleSection to={{pathname: `/perfil/perguntas`}}>
+          <MenuText MiddleSection to={{pathname: '/posts'}}>
+            Posts
+          </MenuText>
+          <MenuText MiddleSection to={{pathname: `/perguntas`}}>
             Minhas perguntas
           </MenuText>
-          <MenuText MiddleSection to={{pathname: `/perfil/respostas`}}>
+          <MenuText MiddleSection to={{pathname: `/respostas`}}>
             Minhas respostas
           </MenuText>
           <MenuText MiddleSection to={{pathname: `/perfil`}}>
