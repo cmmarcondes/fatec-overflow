@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import SaveBtn from './Components/SaveBtn/SaveBtn';
-import Menu from './Components/Content/Menu';
+import SaveBtn from './Components/buttons/SaveBtn';
+import Main from './Components/conteudos/main/Main';
 const App = () => {
   return (
     <div className="App">
-      <Menu />
+      <Main />
       <SaveBtn />
     </div>
   );
