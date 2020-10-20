@@ -14,7 +14,7 @@ const Card = () => {
   }, [GetPosts]);
 
   const post_control = post.map((element)=>{
-    return <StyledCard>{element.title}</StyledCard>
+    return <StyledCard key={element.id}>{element.title}</StyledCard>
   })
   return (
       <>
