@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import { StyledCard } from '../../../Styles/styles';
+import { PostContent, PostTitle, PostUser, StyledCard } from '../../../Styles/styles';
 import PostService from '../../../Services/service';
 
 const Card = () => {
@@ -12,9 +12,12 @@ const Card = () => {
   useEffect(()=>{
     GetPosts();
   }, [GetPosts]);
-
+  
   const post_control = post.map((element)=>{
-    return <StyledCard key={element.id}>{element.title}</StyledCard>
+    return <StyledCard key={element.id} to={{pathname: `/posts/${element.id}`}}>
+      <PostTitle homepage>{element.title.slice(0, 80)}</PostTitle>
+      <PostUser>{`Fulano <cicrano@fatec.sp.gov.br>`}</PostUser>
+    </StyledCard>
   })
   return (
       <>

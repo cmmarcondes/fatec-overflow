@@ -3,7 +3,7 @@ import Nav from '../nav/Nav';
 import Card from '../card/Card';
 import { Container } from '../../../Styles/styles';
 
-const Main = () => {
+const Questions = () => {
   return (
       <>
     <Nav />
@@ -14,4 +14,4 @@ const Main = () => {
   );
 }
 
-export default Main;
+export default Questions;

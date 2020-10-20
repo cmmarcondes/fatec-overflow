@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -7,6 +8,9 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   padding-left: 430px;
+  @media (max-width: 1024px){
+      padding-left: 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -40,6 +44,9 @@ export const StyledMenu = styled.div`
   width: 400px;
   background-color: white;
   border-right: 0.2px solid lightgrey;
+  @media (max-width: 1024px){
+      display: none;
+  }
 `;
 
 export const TopSection = styled.div`
@@ -59,7 +66,8 @@ export const MiddleSection = styled.div`
   margin-top: 20px;
 `;
 
-export const StyledCard = styled.div`
+export const StyledCard = styled(Link)`
+  text-decoration: none;
   width: 200px;
   height: 250px;
   margin: 20px;
@@ -69,13 +77,14 @@ export const StyledCard = styled.div`
   border-radius: 8px;
 `;
 
-export const MenuText = styled.h1`
+export const MenuText = styled(Link)`
   ${(props) =>
     props.MiddleSection
       ? {
           transition: ".3s ease-in",
         }
       : false};
+  text-decoration: none;
   display: flex;
   background-color: white;
   color: #7c77b9;
@@ -98,4 +107,36 @@ export const MenuText = styled.h1`
           }
         : false}
   }
+`;
+
+export const StyledPost = styled.div`
+  width: auto;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 2px 8px 1px gray;
+  border-radius: 8px;
+`;
+
+export const PostTitle = styled.h2`
+  font-size: ${(props) => (props.homepage ? "26px" : "36px")};
+  color: black;
+  font-weight: lighter;
+  margin-bottom: 10px;
+`;
+
+export const PostContent = styled.h3`
+  font-size: 20px;
+  color: black;
+  font-weight: lighter;
+  margin-bottom: 20px;
+`;
+
+export const PostUser = styled.h4`
+  font-size: 18px;
+  color: gray;
+  font-weight: lighter;
+  font-style: italic;
+  margin-bottom: 50px;
 `;

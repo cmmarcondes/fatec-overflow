@@ -5,16 +5,16 @@ const MenuMiddleItens = () => {
     return(
         <>
         <MiddleSection>
-          <MenuText MiddleSection>
+          <MenuText MiddleSection to={{pathname: `/`}}>
             Início
           </MenuText>
-          <MenuText MiddleSection>
+          <MenuText MiddleSection to={{pathname: `/perfil/perguntas`}}>
             Minhas perguntas
           </MenuText>
-          <MenuText MiddleSection>
+          <MenuText MiddleSection to={{pathname: `/perfil/respostas`}}>
             Minhas respostas
           </MenuText>
-          <MenuText MiddleSection>
+          <MenuText MiddleSection to={{pathname: `/perfil`}}>
             Meu perfil
           </MenuText>
         </MiddleSection>
