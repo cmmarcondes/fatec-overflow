@@ -56,6 +56,19 @@ static getRespostas(data, id_usuario){
     })
   })
 }
+
+static add_post(data){
+  return new Promise((resolve, reject)=>{
+    api
+    .post(`/posts`, data)
+    .then((data)=>{
+      resolve(data);
+    })
+    .catch((data)=>{
+      reject(data);
+    })
+  })
+}
 }
 
 export default PostService;
