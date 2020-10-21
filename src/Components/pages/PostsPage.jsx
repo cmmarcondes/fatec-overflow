@@ -16,8 +16,11 @@ const Posts = () => {
   
   const post_control = post.map((element)=>{
     return <StyledCard key={element.id} to={{pathname: `/posts/${element.id}`}}>
-      <PostTitle homepage>{element.title.slice(0, 80)}</PostTitle>
-      <PostUser>{`Fulano <cicrano@fatec.sp.gov.br>`}</PostUser>
+      <PostTitle homepage>{element.title}</PostTitle>
+      {element.user_details.map((user)=>{
+        return <PostUser key={user.id}>{`${user.username} <${user.email}>`}</PostUser>
+      })}
+      
     </StyledCard>
   })
   return (

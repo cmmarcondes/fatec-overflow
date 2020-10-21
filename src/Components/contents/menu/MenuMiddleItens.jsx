@@ -11,10 +11,10 @@ const MenuMiddleItens = () => {
           <MenuText  to={{pathname: '/posts'}} middle='true'>
             Posts
           </MenuText>
-          <MenuText  to={{pathname: `/perguntas`}}middle='true'>
+          <MenuText  to={{pathname: `/perfil/perguntas`}}middle='true'>
             Minhas perguntas
           </MenuText>
-          <MenuText  to={{pathname: `/respostas`}} middle='true'>
+          <MenuText  to={{pathname: `/perfil/respostas`}} middle='true'>
             Minhas respostas
           </MenuText>
           <MenuText  to={{pathname: `/perfil`}} middle='true'>

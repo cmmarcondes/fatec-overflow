@@ -13,11 +13,11 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route path="/" exact component={App} />
-      <Route path="/posts/:id" component={MainDetails} />
-      <Route path="/perfil" component={MainProfiles} />
-      <Route path="/perguntas" component={MainQuestions} />
-      <Route path="/respostas" component={MainAnswers} />
-      <Route path="/posts" component={MainPosts} />
+      <Route path="/posts/:id" exact component={MainDetails} />
+      <Route path="/perfil" exact component={MainProfiles} />
+      <Route path="/perfil/perguntas" exact component={MainQuestions} />
+      <Route path="/perfil/respostas" exact component={MainAnswers} />
+      <Route path="/posts" exact component={MainPosts} />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

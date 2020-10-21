@@ -1,5 +1,5 @@
-import React, {useState, useCallback, useEffect} from 'react';
-import { Button, StyledCard, PostTitle } from '../../../Styles/styles';
+import React, { useCallback } from 'react';
+import { Button } from '../../../Styles/styles';
 import PostService from '../../../Services/service'
 import swal from 'sweetalert2';
 
