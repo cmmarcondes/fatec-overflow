@@ -88,7 +88,7 @@ export const StyledCard = styled(Link)`
 
 export const MenuText = styled(Link)`
   ${(props) =>
-    props.MiddleSection
+    props.middle
       ? {
           transition: ".3s ease-in",
         }
@@ -100,15 +100,15 @@ export const MenuText = styled(Link)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: ${(props) => (props.MiddleSection ? "70px" : "50px")};
+  height: ${(props) => (props.middle ? "70px" : "50px")};
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 3px;
-  margin-top: ${(props) => (props.MiddleSection ? "30px" : "none")};
+  margin-top: ${(props) => (props.middle ? "30px" : "none")};
   font-size: 30px;
-  font-weight: ${(props) => (props.MiddleSection ? "lighter" : "none")};
+  font-weight: ${(props) => (props.middle ? "lighter" : "none")};
   &:hover {
     ${(props) =>
-      props.MiddleSection
+      props.middle
         ? {
             transition: "0.3s ease-in",
             backgroundColor: "#7c77b9",

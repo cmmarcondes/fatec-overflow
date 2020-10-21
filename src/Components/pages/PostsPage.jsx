@@ -4,6 +4,7 @@ import PostService from '../../Services/service';
 
 const Posts = () => {
   const [post, setPost] = useState([]);
+
   const GetPosts = useCallback(async()=>{
     const post_data = await PostService.getPosts();
     setPost(post_data.data);

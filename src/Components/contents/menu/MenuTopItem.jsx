@@ -5,7 +5,7 @@ const MenuTopItem = () => {
     return (
     <>
     <TopSection>
-    <MenuText>Fatec overflow</MenuText>
+    <MenuText to="/">Fatec overflow</MenuText>
     </TopSection>
     </>
     )
