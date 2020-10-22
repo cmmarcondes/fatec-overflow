@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { Button } from '../../../Styles/styles';
-import PostService from '../../../Services/service'
+import PostService from '../../../Services/PostServices'
 import swal from 'sweetalert2';
 
 const AddButton = () => {

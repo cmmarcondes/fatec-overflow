@@ -124,6 +124,7 @@ export const StyledPost = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   padding: 50px;
   background-color: white;
   box-shadow: 0px 1px 6px 1px gray;
@@ -149,5 +150,28 @@ export const PostUser = styled.h4`
   color: gray;
   font-weight: lighter;
   font-style: italic;
-  margin-bottom: 50px;
+  padding-left: ${props => props.comments ? '35px' : '15px'}
+`;
+
+export const StyledBar = styled(Link)`
+text-decoration: none;
+height: 100%;
+width: 90%;
+background-color: white;
+font-size: 24px;
+margin-left: auto;
+margin-right: auto;
+border-bottom: 1px solid lightgray;
+padding: 20px;
+&:first-child{
+  margin-top: 50px;
+}
+`;
+
+export const StyledAnswer = styled.h2`
+  font-size: 24px;
+  color: black;
+  font-weight: lighter;
+  font-style:normal;
+  padding-left: 20px;
 `;

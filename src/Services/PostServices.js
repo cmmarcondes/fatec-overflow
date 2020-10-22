@@ -5,10 +5,23 @@ class PostService {
     throw new Error("Esta classe não pode ser instanciada");
   }
 
-  static getPerfil(data, id_usuario){
+  static getPosts(data) {
+    return new Promise((resolve, reject) => {
+      api
+        .get(`/posts`, data)
+        .then((data) => {
+          resolve(data);
+        })
+        .catch((data) => {
+          reject(data);
+        });
+    });
+  }
+
+  static add_post(data){
     return new Promise((resolve, reject)=>{
       api
-      .get(`/perfil/${id_usuario}`, data)
+      .post(`/posts`, data)
       .then((data)=>{
         resolve(data);
       })
@@ -18,10 +31,10 @@ class PostService {
     })
   }
 
-  static getPerguntas(data, id_usuario){
+  static get_post_details(data, id_post){
     return new Promise((resolve, reject)=>{
       api
-      .get(`/perguntas/${id_usuario}`, data)
+      .get(`/posts/${id_post}`, data)
       .then((data)=>{
         resolve(data);
       })
@@ -29,20 +42,6 @@ class PostService {
         reject(data);
       })
     })
+  }
 }
-
-static getRespostas(data, id_usuario){
-  return new Promise((resolve, reject)=>{
-    api
-    .get(`/respostas/${id_usuario}`, data)
-    .then((data)=>{
-      resolve(data);
-    })
-    .catch((data)=>{
-      reject(data);
-    })
-  })
-}
-}
-
 export default PostService;
