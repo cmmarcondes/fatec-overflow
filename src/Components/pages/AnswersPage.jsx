@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback, useState } from 'react';
 import AnswerService from '../../Services/service'
-import { PostTitle, StyledCard } from '../../Styles/styles';
+import { PostTitle, StyledBar } from '../../Styles/styles';
 
 const AnswersPage = () => {
     const [answer, setAnswer] = useState([]);
@@ -16,9 +16,9 @@ const AnswersPage = () => {
 
     const answer_control = answer.map((element)=>{
         return <>
-        <StyledCard key={element.id} to={{pathname: `/posts/${element.fk_answers_asks}`}}>
+        <StyledBar key={element.id} to={{pathname: `/posts/${element.fk_answers_asks}`}}>
         <PostTitle homepage ><i>"{element.body}"</i></PostTitle>
-        </StyledCard>
+        </StyledBar>
         </>
     })
     return(

@@ -3,7 +3,6 @@ import {
   PostTitle,
   PostUser,
   StyledBar,
-  StyledCard,
 } from "../../Styles/styles";
 import PostService from "../../Services/PostServices";
 
@@ -27,16 +26,12 @@ const Posts = () => {
           return (
             <>
             <PostUser key={user.id}>
-              Criado por: {`${user.username} <${user.email}>`} em:{" "}
-              {element.createdAt.slice(8, 10)}/{element.createdAt.slice(5, 7)}/
+              Criado por: {`${user.username} <${user.email}>`} em: {element.createdAt.slice(8, 10)}/{element.createdAt.slice(5, 7)}/
               {element.createdAt.slice(0, 4)}
             </PostUser>            
             </>
           );
         })}
-        <PostUser comments>
-            Esse post tem {element.answers.length} comentários.
-            </PostUser>
       </StyledBar>
     );
   });

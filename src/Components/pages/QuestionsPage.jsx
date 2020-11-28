@@ -1,6 +1,6 @@
 import React, {useState, useCallback, useEffect} from 'react';
 import QuestionsService from '../../Services/service';
-import { StyledCard, PostTitle } from '../../Styles/styles';
+import { StyledBar, PostTitle, PostUser } from '../../Styles/styles';
 
 const QuestionsPage = () => {
     const [questions, setQuestions] = useState([]);
@@ -16,9 +16,11 @@ const QuestionsPage = () => {
 
     const questions_control = questions.map((element)=>{
         return <>
-        <StyledCard key={element.id} to={{pathname: `/posts/${element.id}`}}>
+        <StyledBar key={element.id} to={{pathname: `/posts/${element.id}`}}>
         <PostTitle homepage>{element.title}</PostTitle>
-        </StyledCard>
+        <PostUser>Criado em {element.createdAt.slice(8, 10)}/{element.createdAt.slice(5, 7)}/
+              {element.createdAt.slice(0, 4)}</PostUser>
+        </StyledBar>
         </>
     })
     return(

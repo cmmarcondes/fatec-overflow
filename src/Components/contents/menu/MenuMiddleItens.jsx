@@ -1,5 +1,5 @@
 import React from 'react';
-import {  MenuText, MiddleSection } from "../../../Styles/styles";
+import { MenuText, MiddleSection } from "./styles";
 
 const MenuMiddleItens = () => {
     return(

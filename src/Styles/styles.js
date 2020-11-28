@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-left: 430px;
+  padding-left: ${props => props.homepage ? '0' : '430px'};
   @media (max-width: 1024px){
       padding-left: 0;
   }
@@ -27,96 +27,9 @@ export const Button = styled.button`
   outline: none;
 `;
 
-export const Header = styled.div`
-display: flex;
-justify-content: space-between;
-  padding: 25px;
-  background-color: #7c77b9;
-  font-size: 30px;
-  color: white;
-  font-family: sans-serif;
-  box-shadow: 0px 1px 8px 2px grey;
-`;
-
-export const HeaderText = styled.h3`
-font-size: 24px;
-font-weight: lighter;
-color: white;
-letter-spacing: 5px;
-`;
-
-export const StyledMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  height: 100%;
-  width: 400px;
-  background-color: white;
-  border-right: 0.2px solid lightgrey;
-  @media (max-width: 1024px){
-      display: none;
-  }
-`;
-
-export const TopSection = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid lightgray;
-`;
-
-export const MiddleSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 20px;
-`;
-
-export const StyledCard = styled(Link)`
-  text-decoration: none;
-  width: 200px;
-  height: 250px;
-  margin: 20px;
-  padding: 20px;
-  background-color: white;
-  box-shadow: 0px 2px 8px 1px gray;
-  border-radius: 8px;
-`;
-
-export const MenuText = styled(Link)`
-  ${(props) =>
-    props.middle
-      ? {
-          transition: ".3s ease-in",
-        }
-      : false};
-  text-decoration: none;
-  display: flex;
-  background-color: white;
-  color: #7c77b9;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: ${(props) => (props.middle ? "70px" : "50px")};
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 3px;
-  margin-top: ${(props) => (props.middle ? "30px" : "none")};
-  font-size: 30px;
-  font-weight: ${(props) => (props.middle ? "lighter" : "none")};
-  &:hover {
-    ${(props) =>
-      props.middle
-        ? {
-            transition: "0.3s ease-in",
-            backgroundColor: "#7c77b9",
-            color: "white",
-          }
-        : false}
-  }
-`;
+/***************************************************************
+                        STYLES OF POSTS/DETAILS
+****************************************************************/
 
 export const StyledPost = styled.div`
   width: 70%;
@@ -150,7 +63,7 @@ export const PostUser = styled.h4`
   color: gray;
   font-weight: lighter;
   font-style: italic;
-  padding-left: ${props => props.comments ? '35px' : '15px'}
+  padding-left: ${props => props.comments ? '35px' : '15px'};
 `;
 
 export const StyledBar = styled(Link)`
@@ -161,6 +74,7 @@ background-color: white;
 font-size: 24px;
 margin-left: auto;
 margin-right: auto;
+box-shadow:0px 20px 8px 0px lightgray;
 border-bottom: 1px solid lightgray;
 padding: 20px;
 &:first-child{
@@ -174,4 +88,49 @@ export const StyledAnswer = styled.h2`
   font-weight: lighter;
   font-style:normal;
   padding-left: 20px;
+`;
+
+/***************************************************************
+                        STYLES OF PROFILE
+****************************************************************/
+
+export const StyledContainer = styled.div`
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 50px;
+  background-color: white;
+  box-shadow: 0px 1px 6px 1px gray;
+  border-radius: 8px;
+`;
+
+
+/***************************************************************
+                        STYLES OF TEXTS
+****************************************************************/
+
+export const ProfileTextUsername = styled.h1`
+text-align: center;
+font-size: 30px;
+color: #7c77b9;
+letter-spacing: 3px;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-weight: lighter;
+`;
+
+export const ProfileTextContent = styled.div`
+display: flex;
+flex-direction: column;
+margin-top: 40px;
+`;
+
+export const ProfileText = styled.h1`
+font-size: 24px;
+margin: 10px;
+letter-spacing: 3px;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+font-weight: lighter;
 `;
